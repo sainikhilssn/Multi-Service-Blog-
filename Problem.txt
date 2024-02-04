@@ -1,0 +1,34 @@
+Database model parameters
+○ Blog: [Long: id, String: title, String: content ]
+○ Comment: [ Long: id, String: text ]
+○ Reaction: [ Long: id, ReactionType: type, TargetType: targetType, Long: targetId ]
+○ Note: You can change the schema if needed
+● Port
+○ Blog-service: 8000
+○ Comment-service: 8001
+○ Reaction-service: 8002
+
+Tasks
+Blog Service
+● Fetch a single blog using GET mapping with API endpoint /api/blogs/{id}. 
+● Fetch all blogs using GET mapping with API endpoint /api/blogs/.
+● Create a single blog using POST mapping with API endpoint /api/blogs/.
+● Update a single blog using PUT mapping with API endpoint /api/blogs/{id}.
+● Delete a single blog using DELETE mapping with API endpoint /api/blogs/{id}.
+● Search for blogs using GET mapping with API endpoint /api/blogs/search.
+
+Comment Service
+● Fetch comments for a specific blog using GET mapping with API endpoint (done)
+/api/comments/blog/{id}.
+● Add a comment for a blog using POST mapping with API endpoint /api/comments.
+● Fetch a single comment using GET mapping with API endpoint /api/comments/{id}.
+● Update a single comment using PUT mapping with API endpoint /api/comments/{id}.
+● Delete all comments for a specific blog using DELETE mapping with API endpoint /api/comments/blog/{id}/comments.
+
+Reaction Service
+● Add a reaction to a specific blog or comment using POST mapping with API endpoint
+/api/reactions/add.
+● Delete a specific reaction for the blog or comment using DELETE mapping with API endpoint
+/api/reactions/delete/{id}.
+
+
